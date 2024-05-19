@@ -1,0 +1,23 @@
+TAREAS SIN HILOS
+
+Los tiempos de ejecucion son diferentes, es impredecible.
+Un ejemplo de procesos de "maxima velocidad posible" en la vida real podría ser rendir un examen.
+Un ejemplo de procesos de velocidad de respuesta no dependiente de la velocidad de procesamiento seria descargar un juego.
+
+
+TAREAS CON HILOS
+
+El tiempo de ejecucion total de todas las tareas se mantuvo en valores relativamente similares, en las tres ejecuciones del codigo realizadas, y fue notoriamente menor con respecto al programa sin hilos.
+Las funciones no se ejecutaron en el orden establecido, sino que fueron completandose en funcion del tiempo de ejecucion de cada tarea.
+Un ejemplo seria el corrector gramatical de un editor de texto.
+
+SUMADOR-RESTADOR_CON_RACE
+
+El tiempo de ejecucion varia, decreciendo en las primeras ejecuciones y manteniendose relativamente bajo, por debajo de 1.
+El valor final del acumulador varia tomando valores entre -5000 y 5000. 
+Esto sucede porque los hilos intentan acceder a un valor al mismo tiempo, y cuando uno lo modifica antes que el otro provoca que el resultado varie.
+Esto podria corregirse mediante la utilizacion de una variable semaforo. 
+
+SUMADOR-RESTADOR_SIN_RACE
+
+El valor final del acumulador da siempre 0, y el tiempo de ejecucion varia, en las ejecuciones realizadas, entre 0.5 y 1.5 
